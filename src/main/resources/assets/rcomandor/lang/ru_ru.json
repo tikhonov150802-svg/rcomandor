@@ -1,0 +1,12 @@
+{
+	"key.category.rcomandor.controls": "Rcomandor",
+	"key.rcomandor.toggle": "Включить/выключить свободную камеру",
+	"key.rcomandor.collision": "Проход сквозь блоки",
+	"key.rcomandor.faster": "Скорость камеры +",
+	"key.rcomandor.slower": "Скорость камеры -",
+	"rcomandor.msg.on": "Свободная камера включена",
+	"rcomandor.msg.off": "Свободная камера выключена",
+	"rcomandor.msg.noclip_on": "Сквозь блоки: да",
+	"rcomandor.msg.noclip_off": "Сквозь блоки: нет",
+	"rcomandor.msg.speed": "Скорость камеры: %s"
+}

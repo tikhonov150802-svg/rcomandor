@@ -1,0 +1,12 @@
+{
+	"key.category.rcomandor.controls": "Rcomandor",
+	"key.rcomandor.toggle": "Toggle freecam",
+	"key.rcomandor.collision": "Toggle noclip",
+	"key.rcomandor.faster": "Camera speed +",
+	"key.rcomandor.slower": "Camera speed -",
+	"rcomandor.msg.on": "Freecam enabled",
+	"rcomandor.msg.off": "Freecam disabled",
+	"rcomandor.msg.noclip_on": "Noclip: on",
+	"rcomandor.msg.noclip_off": "Noclip: off",
+	"rcomandor.msg.speed": "Camera speed: %s"
+}
