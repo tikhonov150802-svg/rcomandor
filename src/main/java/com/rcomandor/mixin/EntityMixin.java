@@ -15,7 +15,7 @@ public abstract class EntityMixin {
 	@Inject(method = "turn", at = @At("HEAD"), cancellable = true)
 	private void rcomandor$turnCamera(double yRot, double xRot, CallbackInfo ci) {
 		if (FreeCam.isActive() && (Object) this == Minecraft.getInstance().player) {
-			FreeCam.camera.turn(yRot, xRot);
+			FreeCam.turn(yRot, xRot);
 			ci.cancel();
 		}
 	}
