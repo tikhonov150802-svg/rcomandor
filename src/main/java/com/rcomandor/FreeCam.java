@@ -42,6 +42,7 @@ public final class FreeCam {
 		cam.setPos(eye.x, eye.y - cam.getEyeHeight(), eye.z);
 		cam.setYRot(mc.player.getYRot());
 		cam.setXRot(mc.player.getXRot());
+		syncHead(cam);
 		syncOld(cam);
 
 		camera = cam;
@@ -140,5 +141,28 @@ public final class FreeCam {
 		cam.zOld = cam.getZ();
 		cam.yRotO = cam.getYRot();
 		cam.xRotO = cam.getXRot();
+		cam.yHeadRotO = cam.yHeadRot;
+		cam.yBodyRotO = cam.yBodyRot;
+	}
+
+	/**
+	 * У стойки для брони Minecraft берёт поворот вида от головы, а не от тела,
+	 * поэтому голову и тело всегда держим в том же направлении, что и камеру.
+	 */
+	public static void syncHead(ArmorStand cam) {
+		cam.yHeadRot = cam.getYRot();
+		cam.yBodyRot = cam.getYRot();
+	}
+
+	/** Вызывается при движении мыши. */
+	public static void turn(double yRot, double xRot) {
+		if (camera == null) return;
+		float oldYaw = camera.getYRot();
+		camera.turn(yRot, xRot);
+		float delta = camera.getYRot() - oldYaw;
+		camera.yHeadRot += delta;
+		camera.yHeadRotO += delta;
+		camera.yBodyRot = camera.yHeadRot;
+		camera.yBodyRotO = camera.yHeadRotO;
 	}
 }
